@@ -1,3 +1,5 @@
+package difference_objects_classes;
+
 public class Main {
     public static void main(String[] args) {
         // Creating objects of the Person class
@@ -7,11 +9,16 @@ public class Main {
         //  Using methods of the person class to show information about the persons
         System.out.println("Person 1: " + person1.getName() + ", Age: " + person1.getAge());
         System.out.println("Person 2: " + person2.getName() + ", Age: " + person2.getAge());
-
+        //Demonstrating Classes and Objects are not the same
+        System.out.println("Making changes... ");
+        //Shows that objects maintains its own state 
+        //Person 1 age unchanged, Person 2 age changes
+        System.out.println("Updated Person 1: " + person1.getName() + ", Age: " + person1.getAge());
         // Modifying age
         person2.setAge(24); 
         // Changing age for Person 2
         System.out.println("Updated Person 2: " + person2.getName() + ", Age: " + person2.getAge());
+     
     }
 }
 
