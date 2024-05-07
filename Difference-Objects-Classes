@@ -1,0 +1,43 @@
+public class Main {
+    public static void main(String[] args) {
+        // Creating objects of the Person class
+        Person person1 = new Person("Brandon", 26);
+        Person person2 = new Person("Jazmin", 23);
+
+        //  Using methods of the person class to show information about the persons
+        System.out.println("Person 1: " + person1.getName() + ", Age: " + person1.getAge());
+        System.out.println("Person 2: " + person2.getName() + ", Age: " + person2.getAge());
+
+        // Modifying age
+        person2.setAge(24); 
+        // Changing age for Person 2
+        System.out.println("Updated Person 2: " + person2.getName() + ", Age: " + person2.getAge());
+    }
+}
+
+// Definition of the Person class
+class Person {
+    private String name;
+    private int age;
+
+    // Constructor to initialize the Person object
+    public Person(String name, int age) {
+        this.name = name;
+        this.age = age;
+    }
+
+    // Getter for name
+    public String getName() {
+        return name;
+    }
+
+    // Getter for age
+    public int getAge() {
+        return age;
+    }
+
+    // Setter for age
+    public void setAge(int age) {
+        this.age = age;
+    }
+}
