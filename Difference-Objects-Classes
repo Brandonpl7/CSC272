@@ -2,42 +2,47 @@ package difference_objects_classes;
 
 public class Main {
     public static void main(String[] args) {
-        // Creating objects of the Person class
-        Person person1 = new Person("Brandon", 26);
-        Person person2 = new Person("Jazmin", 23);
-        //  Using methods of the person class to show information about the persons
-        System.out.println("Person 1: " + person1.getName() + ", Age: " + person1.getAge());
-        System.out.println("Person 2: " + person2.getName() + ", Age: " + person2.getAge());
+        // Creating objects of the Employee class
+        Employee employee1 = new Employee("Brandon", 26);
+        Employee employee2 = new Employee("Jazmin", 23);
+
+        //  Using methods of the Employee class to show information about the Employees
+        System.out.println("Employee 1: " + employee1.getName() + ", Age: " + employee1.getAge());
+        System.out.println("Employee 2: " + employee2.getName() + ", Age: " + employee2.getAge());
         //Demonstrating Classes and Objects are not the same
         System.out.println("Making changes... ");
         //Shows that objects maintains its own state 
-        //Person 1 age unchanged, Person 2 age changes
-        System.out.println("Updated Person 1: " + person1.getName() + ", Age: " + person1.getAge());
+        //Employee 1 age unchanged, Employee 2 age changes
+        System.out.println("Updated Employee 1: " + employee1.getName() + ", Age: " + employee1.getAge()+ " (No changes..) ");
         // Modifying age
-        person2.setAge(24); 
-        // Changing age for Person 2
-        System.out.println("Updated Person 2: " + person2.getName() + ", Age: " + person2.getAge());
+        employee2.setAge(24); 
+        // Changing age for Employee 2
+        System.out.println("Updated Employee 2: " + employee2.getName() + ", Age: " + employee2.getAge());
      
     }
 }
 
-// Definition of the Person class
-class Person {
+// Definition of the Employee class
+class Employee {
     private String name;
     private int age;
-    // Constructor to initialize the Person object
-    public Person(String name, int age) {
+
+    // Constructor to initialize the Employee object
+    public Employee(String name, int age) {
         this.name = name;
         this.age = age;
     }
+
     // Getter for name
     public String getName() {
         return name;
     }
+
     // Getter for age
     public int getAge() {
         return age;
     }
+
     // Setter for age
     public void setAge(int age) {
         this.age = age;
